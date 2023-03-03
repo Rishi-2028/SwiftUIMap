@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13B38D129B2036C00A17127 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B38D029B2036C00A17127 /* LocationsListView.swift */; };
 		B1E6251A29B1BE480045511C /* SwiftUIMapAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6251929B1BE480045511C /* SwiftUIMapAppApp.swift */; };
-		B1E6251C29B1BE480045511C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6251B29B1BE480045511C /* ContentView.swift */; };
-		B1E6251E29B1BE490045511C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E6251D29B1BE490045511C /* Assets.xcassets */; };
 		B1E6252129B1BE490045511C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E6252029B1BE490045511C /* Preview Assets.xcassets */; };
+		B1E6252829B1BE670045511C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E6252729B1BE670045511C /* Assets.xcassets */; };
+		B1E6252D29B1C03C0045511C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6252C29B1C03C0045511C /* Location.swift */; };
+		B1E6253029B1C1D80045511C /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6252F29B1C1D80045511C /* LocationsDataService.swift */; };
+		B1E6253229B1C3270045511C /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6253129B1C3270045511C /* LocationView.swift */; };
+		B1E6253429B1C3A80045511C /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6253329B1C3A80045511C /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B13B38D029B2036C00A17127 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		B1E6251629B1BE480045511C /* SwiftUIMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E6251929B1BE480045511C /* SwiftUIMapAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapAppApp.swift; sourceTree = "<group>"; };
-		B1E6251B29B1BE480045511C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B1E6251D29B1BE490045511C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1E6252029B1BE490045511C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B1E6252729B1BE670045511C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1E6252C29B1C03C0045511C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B1E6252F29B1C1D80045511C /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		B1E6253129B1C3270045511C /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		B1E6253329B1C3A80045511C /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				B1E6251929B1BE480045511C /* SwiftUIMapAppApp.swift */,
-				B1E6251B29B1BE480045511C /* ContentView.swift */,
-				B1E6251D29B1BE490045511C /* Assets.xcassets */,
+				B1E6252929B1BFAC0045511C /* Models */,
+				B1E6252B29B1BFC20045511C /* ViewModels */,
+				B1E6252A29B1BFB90045511C /* Views */,
+				B1E6252E29B1C1A40045511C /* DataServices */,
+				B1E6252729B1BE670045511C /* Assets.xcassets */,
 				B1E6251F29B1BE490045511C /* Preview Content */,
 			);
 			path = SwiftUIMapApp;
@@ -65,6 +76,39 @@
 				B1E6252029B1BE490045511C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B1E6252929B1BFAC0045511C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1E6252C29B1C03C0045511C /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B1E6252A29B1BFB90045511C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1E6253129B1C3270045511C /* LocationView.swift */,
+				B13B38D029B2036C00A17127 /* LocationsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1E6252B29B1BFC20045511C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1E6253329B1C3A80045511C /* LocationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B1E6252E29B1C1A40045511C /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				B1E6252F29B1C1D80045511C /* LocationsDataService.swift */,
+			);
+			path = DataServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +169,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E6252829B1BE670045511C /* Assets.xcassets in Resources */,
 				B1E6252129B1BE490045511C /* Preview Assets.xcassets in Resources */,
-				B1E6251E29B1BE490045511C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1E6251C29B1BE480045511C /* ContentView.swift in Sources */,
+				B1E6252D29B1C03C0045511C /* Location.swift in Sources */,
+				B1E6253229B1C3270045511C /* LocationView.swift in Sources */,
 				B1E6251A29B1BE480045511C /* SwiftUIMapAppApp.swift in Sources */,
+				B13B38D129B2036C00A17127 /* LocationsListView.swift in Sources */,
+				B1E6253429B1C3A80045511C /* LocationViewModel.swift in Sources */,
+				B1E6253029B1C1D80045511C /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
