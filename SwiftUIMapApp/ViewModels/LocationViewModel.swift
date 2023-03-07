@@ -9,6 +9,8 @@ import Foundation
 import MapKit
 import SwiftUI
 
+
+
 class LocationViewModel: ObservableObject {
     
     //All loaded locations
@@ -27,6 +29,9 @@ class LocationViewModel: ObservableObject {
     
     //Show list  of locations
     @Published var showLocationList: Bool = false
+    
+    // Show Location Detail Via  Sheet
+    @Published var showLocationDetailSheet: Location? = nil
     
     init() {
         let locations = LocationsDataService.locations

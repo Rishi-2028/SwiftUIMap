@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B13B38D129B2036C00A17127 /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B38D029B2036C00A17127 /* LocationsListView.swift */; };
 		B13B38D329B2176A00A17127 /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B38D229B2176A00A17127 /* LocationPreviewView.swift */; };
+		B177AD1129B4569100B4224A /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B177AD1029B4569100B4224A /* LocationMapAnnotationView.swift */; };
+		B177AD1329B4620300B4224A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B177AD1229B4620300B4224A /* LocationDetailView.swift */; };
 		B1E6251A29B1BE480045511C /* SwiftUIMapAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E6251929B1BE480045511C /* SwiftUIMapAppApp.swift */; };
 		B1E6252129B1BE490045511C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E6252029B1BE490045511C /* Preview Assets.xcassets */; };
 		B1E6252829B1BE670045511C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E6252729B1BE670045511C /* Assets.xcassets */; };
@@ -21,6 +23,9 @@
 /* Begin PBXFileReference section */
 		B13B38D029B2036C00A17127 /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		B13B38D229B2176A00A17127 /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
+		B177AD1029B4569100B4224A /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
+		B177AD1229B4620300B4224A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		B17DA38B29B4835300035017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B1E6251629B1BE480045511C /* SwiftUIMapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E6251929B1BE480045511C /* SwiftUIMapAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapAppApp.swift; sourceTree = "<group>"; };
 		B1E6252029B1BE490045511C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		B1E6251829B1BE480045511C /* SwiftUIMapApp */ = {
 			isa = PBXGroup;
 			children = (
+				B17DA38B29B4835300035017 /* Info.plist */,
 				B1E6251929B1BE480045511C /* SwiftUIMapAppApp.swift */,
 				B1E6252929B1BFAC0045511C /* Models */,
 				B1E6252B29B1BFC20045511C /* ViewModels */,
@@ -94,6 +100,8 @@
 				B1E6253129B1C3270045511C /* LocationView.swift */,
 				B13B38D029B2036C00A17127 /* LocationsListView.swift */,
 				B13B38D229B2176A00A17127 /* LocationPreviewView.swift */,
+				B177AD1029B4569100B4224A /* LocationMapAnnotationView.swift */,
+				B177AD1229B4620300B4224A /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,11 +194,13 @@
 			files = (
 				B1E6252D29B1C03C0045511C /* Location.swift in Sources */,
 				B1E6253229B1C3270045511C /* LocationView.swift in Sources */,
+				B177AD1329B4620300B4224A /* LocationDetailView.swift in Sources */,
 				B1E6251A29B1BE480045511C /* SwiftUIMapAppApp.swift in Sources */,
 				B13B38D129B2036C00A17127 /* LocationsListView.swift in Sources */,
 				B13B38D329B2176A00A17127 /* LocationPreviewView.swift in Sources */,
 				B1E6253429B1C3A80045511C /* LocationViewModel.swift in Sources */,
 				B1E6253029B1C1D80045511C /* LocationsDataService.swift in Sources */,
+				B177AD1129B4569100B4224A /* LocationMapAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,17 +326,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMapApp/Preview Content\"";
 				DEVELOPMENT_TEAM = VBR6BQ4HNS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIMapApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,17 +356,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMapApp/Preview Content\"";
 				DEVELOPMENT_TEAM = VBR6BQ4HNS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIMapApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
